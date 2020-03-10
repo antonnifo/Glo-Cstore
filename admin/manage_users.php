@@ -12,14 +12,14 @@
 								<ul>
 									<li id="noPrint"><a href="index.php">Home</a><span>«</span></li>
 									
-									<li id="noPrint">customers</li>
+									<li id="noPrint">Users</li>
 								</ul>
 							</div>
 						</div>
 					<!-- //breadcrumbs -->
 
 <div class="inner_content_w3_agile_info two_in">
-<h2 class="w3_inner_tittle">Manage Customers</h2>
+<h2 class="w3_inner_tittle">Manage Users</h2>
 <!-- tables -->
         
 <div class="agile-tables">
@@ -27,16 +27,15 @@
 <input type="text" id="myInput" placeholder="Search..." title="Type in  something" class="noPrint" >
 <button type="button" class="btn btn-primary btn-flat btn-pri" onclick="window.print()" id="noPrint"><i class="fa fa-print" aria-hidden="true"></i> Print</button>
 <!-- <button type="button" class="btn btn-primary btn-flat btn-pri" id="noPrint"><i class="fa fa-user" aria-hidden="true"></i>Add Tenant</button> -->
-<a href="add_customer.php"class="btn btn-primary btn-flat btn-pri" id="noPrint"> <i class="fa fa-user"></i> Add customer </a>
+<a href="add_user.php"class="btn btn-primary btn-flat btn-pri" id="noPrint"> <i class="fa fa-user"></i> Add User </a>
 <table id="table-two-axis" class="two-axis">
 <thead>
     <tr>
     <th>Sr.no</th>
-                        <th>Fname</th>
-                        <th>Lname</th>
+                        <th>Name</th>
+                        <th>Email</th>
                         <th>Phone</th>
-                        <th>Mail</th>
-                        <th>DOA</th>
+                        <th>Date</th>
                         <th>Added_By</th>
                         <th></th>
                         <th></th>
@@ -46,21 +45,20 @@
         
 <?php
                       $count = 1;
-                      $sel_query = "SELECT * FROM customer  ORDER BY customer_id Desc; ";
+                      $sel_query = "SELECT * FROM admin  ORDER BY id Desc; ";
                       $result = mysqli_query($con, $sel_query);
                       confirm_query($result);
                       while ($row = mysqli_fetch_assoc($result)) { ?>
 
                       <tr>
                         <td><?php echo $count; ?></td>
-                        <td><?php echo $row["first_name"]; ?></td>
-                        <td><?php echo $row["last_name"]; ?></td>
-                        <td><?php echo $row["mobile"]; ?></td>
+                        <td><?php echo $row["name"]; ?></td>
                         <td><?php echo $row["email"]; ?></td>
-                        <td><?php echo $row["trn_date"]; ?></td>
-                        <td><?php echo $row["added_by"]; ?></td>
-                
-                        <td id="noPrint"><a href="edit_customer.php?id=<?php echo $row["customer_id"]; ?>"class="btn btn-flat btn-pri btn-primary"> <i class="fa fa-pencil"></i> Edit</a> </td>
+                        <td><?php echo $row["phone"]; ?></td>
+                        <td><?php echo $row["date_"]; ?></td>
+                        <td><?php echo $row["admin_"]; ?></td>
+                        
+        
                         <td id="noPrint"><a href="delete_customer.php?id=<?php echo $row["customer_id"]; ?>"class="btn btn-flat btn-pri btn-danger"> <i class="fa fa-trash"></i> Delete </a> </td>
                       </tr>
                        <?php $count++;
@@ -80,7 +78,7 @@
 <!-- //inner_content-->
 <!--copy rights start here-->
 <div class="copyrights">
-	 <p>© 2018-<?php echo date("Y"); ?>Car Garage. All Rights Reserved </p>
+	 <p>© 2019-<?php echo date("Y"); ?>Glo Cstore. All Rights Reserved </p>
 </div>	
 <!--copy rights end here-->
 <!-- js -->

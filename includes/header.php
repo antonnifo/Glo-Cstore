@@ -6,7 +6,7 @@
 <!DOCTYPE html>
 <html lang="zxx">
 	<head>
-		<title id="noPrint">Dishi Foods | Manage</title>
+		<title id="noPrint">Glo Cstore | Manage</title>
 		<!-- custom-theme -->
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
@@ -60,7 +60,7 @@ $(document).ready(function(){
 					</nav>
 				</li>
 				<!-- //nav_agile_w3l -->
-                <li class="second logo"><h1><a href="index.php"><i class="fa fa-graduation-cap" aria-hidden="true"></i> Dishi Foods </a></h1></li>
+                <li class="second logo"><h1><a href="index.php"><i class="fa fa-graduation-cap" aria-hidden="true"></i>Glo Cstore </a></h1></li>
 					<li class="second admin-pic">
 				       <ul class="top_dp_agile">
 									<li class="dropdown profile_details_drop">

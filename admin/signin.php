@@ -5,7 +5,7 @@
 <!DOCTYPE html>
 <html lang="zxx">
 <head>
-<title>Dishi Foods</title>
+<title>Glo Cstore</title>
 <!-- custom-theme -->
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
@@ -79,7 +79,7 @@
 						</div>
 	<!--copy rights start here-->
 	<div class="copyrights_agile">
-	 <p>© 2019-<?php echo date("Y"); ?>Dishi Foods. All Rights Reserved </p>
+	 <p>© 2019-<?php echo date("Y"); ?>Glo Cstore. All Rights Reserved </p>
 	</div>	
 			<!--copy rights end here-->
 						    </div>

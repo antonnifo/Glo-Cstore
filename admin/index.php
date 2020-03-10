@@ -5,7 +5,7 @@
 <!DOCTYPE html>
 <html lang="zxx">
 <head>
-<title>Dishi Admin</title>
+<title>Glo Cstore Admin</title>
 <!-- custom-theme -->
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
@@ -36,7 +36,7 @@
 					<a class="gn-icon gn-icon-menu"><i class="fa fa-bars" aria-hidden="true"></i><span>Menu</span></a>
 				</li>
 				<!-- //nav_agile_w3l -->
-				<li class="second logo"><h1><a href="#"><i class="fa fa-graduation-cap" aria-hidden="true"></i> Dishi Foods</a></h1></li>
+				<li class="second logo"><h1><a href="#"><i class="fa fa-graduation-cap" aria-hidden="true"></i> Glo Cstore</a></h1></li>
 					<li class="second admin-pic">
 				       <ul class="top_dp_agile">
 									<li class="dropdown profile_details_drop">
@@ -107,30 +107,30 @@
 					   <div class="agile_top_w3_grids">
 					          <ul class="ca-menu">
 									<li>
-										<a href="manage_accused.php">
+										<a href="manage_orders.php">
 											
-											<i class="fa fa-group" aria-hidden="true"></i>
+											<i class="fa fa-shopping-cart fa-spin" aria-hidden="true"></i>
 											<div class="ca-content">
 												<h4 class="ca-main">
                                                    <?php 
-                                                    $query = "SELECT count(*) as total from accused";
+                                                    $query = "SELECT count(*) as total from orders_";
                                                     $result = mysqli_query($con, $query);
                                                     confirm_query($result);
                                                     $data = mysqli_fetch_assoc($result);
                                                     echo $data['total'];
                                                     ?>
                                                 </h4>
-												<h3 class="ca-sub one">Accused Persons</h3>
+												<h3 class="ca-sub one">Placed Orders</h3>
 											</div>
 										</a>
 									</li>
 									<li>
-										<a href="manage_cases.php">
-										  <i class="fa fa-bus" aria-hidden="true"></i>
+										<a href="manage_users.php">
+										  <i class="fa fa-group fa-spin" aria-hidden="true"></i>
 											<div class="ca-content">
 												<h4 class="ca-main one">
 												       <?php 
-                                                    $query = "SELECT count(*) as total from case_";
+                                                    $query = "SELECT count(*) as total from admin";
                                                     $result = mysqli_query($con, $query);
                                                     confirm_query($result);
                                                     $data = mysqli_fetch_assoc($result);
@@ -138,28 +138,12 @@
                                                 ?>           
 
                                                 </h4>
-												<h3 class="ca-sub">Cases</h3>
+												<h3 class="ca-sub">Users</h3>
 
 											</div>
 										</a>
 									</li>
-									<li>
-										<a href="manage_users.php">
-											<i class="fa fa-user" aria-hidden="true"></i>
-											<div class="ca-content">
-											<h4 class="ca-main two">
-                                            <?php 
-                                                $query = "SELECT count(*) as total from admin";
-                                                $result = mysqli_query($con, $query);
-                                                confirm_query($result);
-                                                $data = mysqli_fetch_assoc($result);
-                                                echo $data['total'];
-                                            ?>
-                                            </h4>
-												<h3 class="ca-sub two">Our Users</h3>
-											</div>
-										</a>
-									</li>
+					
 									<li>
 										<!-- <a href="manage_payments.php"> -->
 											<i class="fa fa-money" aria-hidden="true"></i>
@@ -238,32 +222,31 @@
 										</div>
 								</div>
 								<div class="col-md-6 fallowers_agile agile_info_shadow">
-									<h3 class="w3_inner_tittle two">Recent accused Persons</h3>
+									<h3 class="w3_inner_tittle two">Recent Ordes</h3>
 												<div class="work-progres">
 													<div class="table-responsive">
 														<table class="table table-hover">
 														  <thead>
 															<tr>
 															  <th>#</th>
-															  <th>Name</th>
-															  <th>Email</th>                                    
-                                                               <th>Nationality</th>															 									
+															  <th>Phone</th>
+															  <th>Address</th>                                    
+                                                               <th>Drink</th>															 									
 															  
 														  </tr>
 													  </thead>
 													  <tbody>
                                                       <?php
                                                             $count = 1;
-                                                            $sel_query = "SELECT * FROM accused  ORDER BY accused_id Asc; ";
+                                                            $sel_query = "SELECT * FROM orders_  ORDER BY order_id Asc; ";
                                                             $result = mysqli_query($con, $sel_query);
                                                             confirm_query($result);
                                                             while ($row = mysqli_fetch_assoc($result)) { ?>
 														<tr>
                                                         <td><?php echo $count; ?></td>
-														  <td><?php echo $row["name_"]; ?></td>
-														  <td><?php echo $row["email"]; ?></td>                                 
-																					 
-														  <td><span><?php echo $row["nationality"]; ?></span></td>
+														  <td><?php echo $row["phone"]; ?></td>
+														  <td><?php echo $row["address"]; ?></td>                                 																					 
+														  <td><span><?php echo $row["drink"]; ?></span></td>
 														 
 														  <!-- <td><span class="badge badge-info">50%</span></td> -->
 													  </tr>

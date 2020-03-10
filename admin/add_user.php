@@ -44,9 +44,10 @@
                     <div class="form-body">
 <?php 
 $name = $password = $admin = $email = "";
- $date= "";
+ $date= $phone="";
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
   $name = test_input($_POST["name"]);
+  $phone = test_input($_POST["phone"]);
   $password = test_input($_POST["password"]);
   $email = test_input($_POST["email"]);
   $date = date("Y-m-d");
@@ -60,6 +61,13 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         <label for="focusedinput" class="col-sm-2 control-label">Name</label>
         <div class="col-sm-8">
             <input type="text" name="name" class="form-control1" id="focusedinput" placeholder="Eg Anthony" required>
+        </div>
+    </div>
+
+    <div class="form-group">
+        <label for="focusedinput" class="col-sm-2 control-label">Mobile</label>
+        <div class="col-sm-8">
+            <input type="text" name="phone" class="form-control1" id="focusedinput" placeholder="Eg 0023083" required>
         </div>
     </div>
 
@@ -95,9 +103,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
 if (isset($_POST["name"])) {
 
-    $query = "INSERT INTO admin (name_,email,password_,date_,admin_)
+    $query = "INSERT INTO admin (name,email,password,date_,admin_,phone)
 
-    VALUES ('{$name}','{$email}', '{".md5($password)."}', '{$date}', '{$admin}')";
+    VALUES ('{$name}','{$email}', '{".md5($password)."}', '{$date}', '{$admin}', '{$phone}')";
 
         $results = mysqli_query($con, $query);
         confirm_query($results);
