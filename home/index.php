@@ -15,42 +15,66 @@
 		<div class="message warning">
 			<div class="inset agile">
 							<div class="sap_tabs w3ls-tabs">
-							<h2>Pickup your path to happy eating</h2>
+							<h2>Pickup your path to happy drinking</h2>
 				<div id="horizontalTab" style="display: block; width: 100%; margin: 0px;">
 					<ul class="resp-tabs-list">
-						<li class="resp-tab-item" aria-controls="tab_item-0" role="tab"><span>Decide Later</span></li> 
+						<li class="resp-tab-item" aria-controls="tab_item-0" role="tab"><span>Place an Order</span></li> 
 						<li class="resp-tab-item" aria-controls="tab_item-1" role="tab"><label>/</label><span>Delivery</span></li>
-						<li class="resp-tab-item" aria-controls="tab_item-2" role="tab"><label>/</label><span>Pickup</span></li>
+						<!-- <li class="resp-tab-item" aria-controls="tab_item-2" role="tab"><label>/</label><span>Pickup</span></li> -->
 					</ul>	
 					<div class="clear"> </div>
 					<div class="alert-close"> </div> 
 					<div class="resp-tabs-container">
 						<div class="tab-1 resp-tab-content" aria-labelledby="tab_item-0">
 							<div class="login-agileits-top"> 
+							
+<?php 
+			$name = $drink="";
+			$reg_date = "";
+
+			if ($_SERVER["REQUEST_METHOD"] == "POST") {
+			$name = $_POST["name"];
+			$drink = $_POST["drink"];
+			$reg_date = date("Y-m-d");
+			$user = $_SESSION['email'];
+
+			}
+
+?>
+
 								<form action="#" method="post">
-									<p>Where are you? </p>
-									<input type="text" name="User Name" placeholder="Street Address,City,State" required=""/>
+									<p>Name </p>
+									<input type="text" name="name" placeholder="Your official name" required=""/>
 									<p>What would you like?</p>
-									<input type="text" placeholder="Item,Restaurant,Cuisine(Optional)" name="User Name" required=""/> 
-									<input type="submit" value="Find restaurants">
+									<input type="text" placeholder="Drink" name="drink" required=""/> 
+									<input type="submit" value="submit">
 								</form>  
 							</div>
 							 
+
+
 						</div> 
 						<div class="tab-1 resp-tab-content" aria-labelledby="tab_item-1">
-							<div class="login-agileits-top"> 
+							<div class="login-agileits-top">
+
+
 								<form action="#" method="post">
-									<p>Name</p>
-									<input type="text" name="Name" placeholder="Name" required=""/>
+							
 									<p>Address</p>
-									<input type="text" placeholder="Street,City,State,Zip Code " name="User Name" required=""/> 
-									<input type="submit" value="Check Availability">
+									<input type="text" placeholder="Street,City,State,Zip Code " name="address" required=""/>
+									<p>Mobile</p> 
+									<input type="text" placeholder="eg 0701234567 " name="phone" required=""/> 
+									<input type="submit" value="Place Order">
 								</form>  
 							</div>
+
+
 						</div>
 						<div class="tab-1 resp-tab-content" aria-labelledby="tab_item-2">
 							<div class="login-agileits-top"> 
-								<div class="login-agileits-top"> 
+								<div class="login-agileits-top">
+
+
 								<form action="#" method="post">
 									<p>Name</p>
 									<input type="text" name="Name" placeholder="Name" required=""/>
@@ -58,6 +82,8 @@
 									<input type="text" placeholder="Phone " name="User Name" required=""/> 
 									<input type="submit" value="Check Availability">
 								</form>  
+
+								
 							</div>  
 							</div>
 						</div>
