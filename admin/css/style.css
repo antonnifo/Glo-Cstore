@@ -1,9 +1,4 @@
-/*--
-Author: W3layouts
-Author URL: http://w3layouts.com
-License: Creative Commons Attribution 3.0 Unported
-License URL: http://creativecommons.org/licenses/by/3.0/
---*/
+
 body{
 	margin:0;
 	padding:0;
@@ -193,7 +188,7 @@ ul.top_dp_agile {
        background-color: #d7e4ef;
 }
 ul.dropdown-menu.drp-mnu i {
-    color: #007ee5;
+    color: #aafb14;
 }
 .badge.blue {
        font-size: 12px;
@@ -289,7 +284,7 @@ li.second.top_bell_nav ul.dropdown-menu{
 	margin-bottom:1em;
 }
 .notification_desc p span {
-    background: #007ee5;
+    background:  #aafb14;
     color: #fff;
     padding: 4px 11px;
     font-size: 0.85em;
@@ -440,7 +435,7 @@ li.second.top_bell_nav.dropdown-menu > li > a:hover,li.second.top_bell_nav .drop
     outline: none;
     color: #fff;
     font-size: .85em;
-    background: #096dbf;
+    background: #aafb14;
     width: 40px;
     height: 40px;
     text-align: center;

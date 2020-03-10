@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Generation Time: Mar 10, 2020 at 07:43 AM
+-- Generation Time: Mar 10, 2020 at 01:03 PM
 -- Server version: 10.4.8-MariaDB
 -- PHP Version: 7.3.10
 
@@ -63,18 +63,18 @@ CREATE TABLE `orders_` (
   `d_date` varchar(65) NOT NULL,
   `time` varchar(65) NOT NULL,
   `bottles` varchar(65) NOT NULL,
-  `d_method` varchar(65) NOT NULL
+  `d_method` varchar(65) NOT NULL,
+  `fullfilled` tinyint(11) NOT NULL DEFAULT 0
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Dumping data for table `orders_`
 --
 
-INSERT INTO `orders_` (`order_id`, `drink`, `name`, `phone`, `address`, `date`, `email`, `d_date`, `time`, `bottles`, `d_method`) VALUES
-(1, 'Famous Grouse (750 ml) ', 'john Doe', '9832832', 'kasabuni', '2020-03-10', 'john@gmail.com', '03/11/2020', '8 : 15 AM', '4', 'on'),
-(2, 'Jameson (350 ml) ', 'keke', '0302303', 'Nigeria', '2020-03-10', 'keke@gmail.com', '03/18/2020', '8 : 18 AM', '3', 'pick up'),
-(3, 'Black & White (750 ml) ', 'Omolo', '8282', 'kayole', '2020-03-10', 'omolo@gmail.com', '03/11/2020', '9 : 24 AM', '6', 'delivery'),
-(4, 'Jameson (350 ml) ', 'RAo', '0930233', 'langata', '2020-03-10', 'rao@gmail.com', '03/18/2020', '9 : 26 AM', '2', 'delivery');
+INSERT INTO `orders_` (`order_id`, `drink`, `name`, `phone`, `address`, `date`, `email`, `d_date`, `time`, `bottles`, `d_method`, `fullfilled`) VALUES
+(1, 'Famous Grouse (750 ml) ', 'john Doe', '9832832', 'kasabuni', '2020-03-10', 'john@gmail.com', '03/11/2020', '8 : 15 AM', '4', 'delivery', 1),
+(2, 'Jameson (350 ml) ', 'keke', '0302303', 'Nigeria', '2020-03-10', 'keke@gmail.com', '03/18/2020', '8 : 18 AM', '3', 'pick up', 1),
+(4, 'Jameson (350 ml) ', 'RAo', '0930233', 'langata', '2020-03-10', 'rao@gmail.com', '03/18/2020', '9 : 26 AM', '2', 'delivery', 0);
 
 --
 -- Indexes for dumped tables

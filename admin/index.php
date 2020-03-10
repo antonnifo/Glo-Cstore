@@ -55,36 +55,25 @@
 				</li>
 				<li class="second top_bell_nav">
 				   <ul class="top_dp_agile ">
-									<li class="dropdown head-dpdn">
-										<a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="true"><i class="fa fa-bell-o" aria-hidden="true"></i> <span class="badge blue">4</span></a>
-									</li>
+								
 									
 						</ul>
 				</li>
 				<li class="second top_bell_nav">
 				   <ul class="top_dp_agile ">
-									<li class="dropdown head-dpdn">
-										<a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="true"><i class="fa fa-envelope-o" aria-hidden="true"></i> <span class="badge blue">3</span></a>
-										
-									</li>
+								
 									
 						</ul>
 				</li>
 				<li class="second top_bell_nav">
 				   <ul class="top_dp_agile ">
-				       <li class="dropdown head-dpdn">
-										<a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false"><i class="fa fa-tasks"></i><span class="badge blue">9</span></a>
-										
-									</li>	
+				      	
 								</ul>
 				</li>
 
 				<li class="second w3l_search">
 				 
-						<form action="#" method="post">
-							<input type="search" name="search" placeholder="Search here..." required="">
-							<button class="btn btn-default" type="submit"><i class="fa fa-search" aria-hidden="true"></i></button>
-						</form>
+				
 					
 				</li>
 				<li class="second full-screen">
@@ -340,7 +329,7 @@
 <!-- banner -->
 <!--copy rights start here-->
 <div class="copyrights">
-	 <p>© 2019-<?php echo date("Y"); ?>Kibera Law Courts. All Rights Reserved </p>
+	 <p>© 2019-<?php echo date("Y"); ?>Glo Cstore All Rights Reserved </p>
 </div>	
 <!--copy rights end here-->
 <!-- js -->

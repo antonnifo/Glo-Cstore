@@ -42,6 +42,7 @@
                         <th>Drink</th>
                         <th>D_method</th>
                         <th>Date</th>
+                        <th>Complete</th>
             
                         <th></th>
                         <th></th>
@@ -68,9 +69,10 @@
                         <td><?php echo $row["drink"]; ?></td>
                         <td><?php echo $row["d_method"]; ?></td>
                         <td><?php echo $row["date"]; ?></td>
+                        <td><?php echo $row["fullfilled"]; ?></td>
                        
-                        <td id="noPrint"><a href="edit_hotel.php?id=<?php echo $row["order_id"]; ?>"class="btn btn-flat btn-pri btn-primary"> <i class="fa fa-pencil"></i> Fulfil</a> </td>
-                        <td id="noPrint"><a href="delete_hotel.php?id=<?php echo $row["order_id"]; ?>"class="btn btn-flat btn-pri btn-danger"> <i class="fa fa-trash"></i> Delete </a> </td>
+                        <td id="noPrint"><a href="complete_order.php?id=<?php echo $row["order_id"]; ?>"class="btn btn-flat btn-pri btn-primary"> <i class="fa fa-pencil"></i> Fulfil</a> </td>
+                        <td id="noPrint"><a href="delete_order.php?id=<?php echo $row["order_id"]; ?>"class="btn btn-flat btn-pri btn-danger"> <i class="fa fa-trash"></i> Delete </a> </td>
                       </tr>
                        <?php $count++;
                     } ?>

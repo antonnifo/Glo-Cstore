@@ -52,7 +52,7 @@ $(document).ready(function(){
 						<div class="gn-scroller scrollbar1">
 							<ul class="gn-menu agile_menu_drop">
 								<li><a href="index.php"> <i class="fa fa-tachometer"></i> Dashboard</a></li>
-								<li><a href="manage_cases.php"> <i class="fa fa-users">Menus</i> </a></li>
+								<li><a href="manage_orders.php"> <i class="fa fa-shopping-cart">Orders</i> </a></li>
 								<li><a href="manage_users.php"> <i class="fa fa-users"></i> Users</a></li>
 								
 							</ul>
@@ -79,34 +79,19 @@ $(document).ready(function(){
 				</li>
 				<li class="second top_bell_nav">
 				   <ul class="top_dp_agile ">
-									<li class="dropdown head-dpdn">
-										<a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="true"><i class="fa fa-bell-o" aria-hidden="true"></i> <span class="badge blue">4</span></a>
-										<ul class="dropdown-menu">
-
-										</ul>
-									</li>
+	 
 									
 						</ul>
 				</li>
 				<li class="second top_bell_nav">
 				   <ul class="top_dp_agile ">
-									<li class="dropdown head-dpdn">
-										<a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="true"><i class="fa fa-envelope-o" aria-hidden="true"></i> <span class="badge blue">3</span></a>
-										<ul class="dropdown-menu">
-									
-										</ul>
-									</li>
+							
 									
 						</ul>
 				</li>
 				<li class="second top_bell_nav">
 				   <ul class="top_dp_agile ">
-				       <li class="dropdown head-dpdn">
-										<a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false"><i class="fa fa-tasks"></i><span class="badge blue">9</span></a>
-										<ul class="dropdown-menu">
-									
-										</ul>
-									</li>	
+				     
 								</ul>
 				</li>
 
